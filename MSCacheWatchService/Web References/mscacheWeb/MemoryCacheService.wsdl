@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MemoryCacheService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:802/MemoryCacheService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:802/MemoryCacheService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMemoryCacheService_GetAppCenterService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppCenterService" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_GetAppCenterService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppCenterServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_GetFavs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavs" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_GetFavs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_GetNews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNews" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_GetNews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_RemoveFav_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFav" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_RemoveFav_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFavResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_AllUserCacheInit_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllUserCacheInit" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_AllUserCacheInit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllUserCacheInitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_RemoveCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCache" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_RemoveCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_testGetCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:testGetCache" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_testGetCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:testGetCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_testSetCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:testSetCache" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_testSetCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:testSetCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_testFileAddCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:testFileAddCache" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_testFileAddCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:testFileAddCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_testTimeAddCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:testTimeAddCache" />
+  </wsdl:message>
+  <wsdl:message name="IMemoryCacheService_testTimeAddCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:testTimeAddCacheResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMemoryCacheService">
+    <wsdl:operation name="GetAppCenterService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMemoryCacheService/GetAppCenterService" message="tns:IMemoryCacheService_GetAppCenterService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMemoryCacheService/GetAppCenterServiceResponse" message="tns:IMemoryCacheService_GetAppCenterService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMemoryCacheService/GetFavs" message="tns:IMemoryCacheService_GetFavs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMemoryCacheService/GetFavsResponse" message="tns:IMemoryCacheService_GetFavs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMemoryCacheService/GetNews" message="tns:IMemoryCacheService_GetNews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMemoryCacheService/GetNewsResponse" message="tns:IMemoryCacheService_GetNews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFav">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMemoryCacheService/RemoveFav" message="tns:IMemoryCacheService_RemoveFav_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMemoryCacheService/RemoveFavResponse" message="tns:IMemoryCacheService_RemoveFav_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllUserCacheInit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMemoryCacheService/AllUserCacheInit" message="tns:IMemoryCacheService_AllUserCacheInit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMemoryCacheService/AllUserCacheInitResponse" message="tns:IMemoryCacheService_AllUserCacheInit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMemoryCacheService/RemoveCache" message="tns:IMemoryCacheService_RemoveCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMemoryCacheService/RemoveCacheResponse" message="tns:IMemoryCacheService_RemoveCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="testGetCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMemoryCacheService/testGetCache" message="tns:IMemoryCacheService_testGetCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMemoryCacheService/testGetCacheResponse" message="tns:IMemoryCacheService_testGetCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="testSetCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMemoryCacheService/testSetCache" message="tns:IMemoryCacheService_testSetCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMemoryCacheService/testSetCacheResponse" message="tns:IMemoryCacheService_testSetCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="testFileAddCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMemoryCacheService/testFileAddCache" message="tns:IMemoryCacheService_testFileAddCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMemoryCacheService/testFileAddCacheResponse" message="tns:IMemoryCacheService_testFileAddCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="testTimeAddCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMemoryCacheService/testTimeAddCache" message="tns:IMemoryCacheService_testTimeAddCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMemoryCacheService/testTimeAddCacheResponse" message="tns:IMemoryCacheService_testTimeAddCache_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMemoryCacheService" type="tns:IMemoryCacheService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAppCenterService">
+      <soap:operation soapAction="http://tempuri.org/IMemoryCacheService/GetAppCenterService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavs">
+      <soap:operation soapAction="http://tempuri.org/IMemoryCacheService/GetFavs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <soap:operation soapAction="http://tempuri.org/IMemoryCacheService/GetNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFav">
+      <soap:operation soapAction="http://tempuri.org/IMemoryCacheService/RemoveFav" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllUserCacheInit">
+      <soap:operation soapAction="http://tempuri.org/IMemoryCacheService/AllUserCacheInit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCache">
+      <soap:operation soapAction="http://tempuri.org/IMemoryCacheService/RemoveCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testGetCache">
+      <soap:operation soapAction="http://tempuri.org/IMemoryCacheService/testGetCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testSetCache">
+      <soap:operation soapAction="http://tempuri.org/IMemoryCacheService/testSetCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testFileAddCache">
+      <soap:operation soapAction="http://tempuri.org/IMemoryCacheService/testFileAddCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testTimeAddCache">
+      <soap:operation soapAction="http://tempuri.org/IMemoryCacheService/testTimeAddCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MemoryCacheService">
+    <wsdl:port name="BasicHttpBinding_IMemoryCacheService" binding="tns:BasicHttpBinding_IMemoryCacheService">
+      <soap:address location="http://localhost:802/MemoryCacheService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
