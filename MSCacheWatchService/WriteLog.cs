@@ -13,7 +13,7 @@ namespace MSCacheWatchService
         static string strFileFolder = "";
         static string fileName = "";
         /// <summary>
-        /// 判断文件日志文件是否超过固定大小，如果超过，则新启动一个日志文件
+        /// 判断文件日志文件是否超过固定大小， 如果超过，则新启动一个日志文件
         /// </summary>
         /// <param name="fileFullPath">现有日志文件全路径</param>
         /// <returns></returns>
